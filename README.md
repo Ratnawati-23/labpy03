@@ -72,7 +72,7 @@ Laba bulan ke- 7 sebesar: 5000000.0
 Laba bulan ke- 8 sebesar: 3000000.0
 Total laba adalah: 19000000.0
 
-latihan 3.py
+# latihan 3.py
 
 saldo = 1000000 → saldo awal Rp1.000.000
 Program berjalan terus menggunakan while True: sampai pengguna memilih keluar atau saldo habis.
