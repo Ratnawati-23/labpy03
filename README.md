@@ -1,12 +1,6 @@
 # labpy03
-Latihan 1 py
-Menampilkan n bilangan acak yang lebih kecil dari 0.5
-Nilai n diinput saat program dijalankan (runtime)
-Boleh menggunakan kombinasi while dan for
-Menggunakan fungsi random() dari modul random
-# latihan1.py
-from random import random
 
+# latihan1.py
 # Meminta input nilai n dari pengguna
 n = int(input("Masukkan nilai N: "))
 
@@ -22,6 +16,8 @@ for i in range(1, n + 1):
         print(f"data ke: {i} => {a}")
 
 print("Selesai")
+
+# PENJELASANYA :
 from random import random → mengimpor fungsi untuk membuat bilangan acak antara 0 sampai 1.
 input("Masukkan nilai N: ") → untuk menentukan berapa banyak data yang akan ditampilkan.
 for i in range(1, n + 1): → perulangan sebanyak n kali.
@@ -38,13 +34,14 @@ data ke: 4 => 0.2753512421571644
 data ke: 5 => 0.39262323000723776
 Selesai
 
-latihan 2 py
+
+# latihan 2 py
 Modal awal = Rp100.000.000
 Bulan 1–2 → belum ada laba (0)
 Bulan 3–4 → laba 1% dari modal (Rp1.000.000)
 Bulan 5–7 → laba 5% dari modal (Rp5.000.000)
 Bulan 8 → laba turun jadi 3% (Rp3.000.000)
-# latihan2.py
+
 modal = 100000000  # modal awal 100 juta
 total = 0  # total laba
 
@@ -61,6 +58,14 @@ for bulan in range(1, 9):
     total += laba
     print(f"Laba bulan ke- {bulan} sebesar: {laba}")
 
+# PENJELASANNYA 
+ Modal awal = Rp100.000.000
+Bulan 1–2 → belum ada laba (0)
+Bulan 3–4 → laba 1% dari modal (Rp1.000.000)
+Bulan 5–7 → laba 5% dari modal (Rp5.000.000)
+Bulan 8 → laba turun jadi 3% (Rp3.000.000)
+
+
 print(f"Total laba adalah: {total}")
 Laba bulan ke- 1 sebesar: 0
 Laba bulan ke- 2 sebesar: 0
@@ -74,6 +79,32 @@ Total laba adalah: 19000000.0
 
 # latihan 3.py
 
+saldo = 1000000  # saldo awal Rp 1.000.000
+
+while True:
+    print(f"\nSaldo saat ini: Rp {saldo}")
+    print("1. Tarik Uang")
+    print("2. Keluar")
+
+    menu = input("Pilih menu (1/2): ")
+
+    if menu == "1":
+        jumlah = int(input("Masukkan jumlah penarikan: "))
+        if jumlah > saldo:
+            print("Saldo tidak cukup!")
+        else:
+            saldo -= jumlah
+            print("Penarikan berhasil!")
+            if saldo == 0:
+                print("Saldo anda sudah habis.")
+                break
+    elif menu == "2":
+        print("Terima kasih telah menggunakan ATM!")
+        break
+    else:
+        print("Pilihan tidak valid, silakan coba lagi.")
+        
+# PENJELASANNYA
 saldo = 1000000 → saldo awal Rp1.000.000
 Program berjalan terus menggunakan while True: sampai pengguna memilih keluar atau saldo habis.
 Jika memilih 1 (Tarik Uang):
@@ -82,5 +113,6 @@ Dicek apakah jumlah > saldo (jika iya, ditolak).
 Jika cukup, saldo dikurangi dan ditampilkan saldo terbaru.
 Jika memilih 2 (Keluar) → program berhenti.
 Jika saldo sudah 0, program otomatis berhenti juga.
+
 
 
